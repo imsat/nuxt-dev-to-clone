@@ -23,22 +23,41 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/assets/styles/reset.scss',
+    '~/assets/styles/base.scss',
+    '~/assets/styles/highlight.scss',
+    '~/assets/styles/app.scss'
   ],
+  /*
+  ** Custom Style SCSS
+  */
+  styleResources: {
+    scss: ['~/assets/styles/tokens.scss']
+  },
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/vue-placeholders.js',
+    '~/plugins/vue-observe-visibility.client.js'
   ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxtjs/style-resources',
+    '@nuxtjs/svg',
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
+    // 'nuxt-ackee'
   ],
+  // ackee: {
+  //   server: 'https://ackee.nuxtjs.com',
+  //   domainId: '6336379b-8d3e-4069-9d2e-897be6a7ed4e'
+  // },
   /*
   ** Build configuration
   */
